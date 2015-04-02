@@ -10,21 +10,33 @@
             padding: 10%;
             font-family: 'Oswald', sans-serif;
         }
+        
+        .green {
+            background-color: #669966;
+        }
 
         .pink {
-            background-color: #e54164;
+            background-color: #e3868f;
+        }
+
+        .orange {
+            background-color: #f79256;
         }
 
         .yellow {
-            background-color: #faa719;
+            background-color: #ead98b;
         }
 
         .lightblue {
-            background-color: #7acdcc;
+            background-color: #00b2ca;
         }
 
         .darkblue {
-            background-color: #1c2e41;
+            background-color: #1d4e89;
+        }
+        
+        .purple {
+            background-color: #b38fb1;
         }
 
         #count {
@@ -63,7 +75,7 @@
         </div>
 
         <div id="footer">
-            What's your #digitalresolution? Text yours to ###-###-####
+            What's your #diaspore? Text yours to ###-###-####
         </div>
 
     </div>
@@ -82,21 +94,21 @@
             // 15% of the time, show a logo instead of a resolution
             if (showLogo <= 15) {
                 var logos = [
-                'http://shannonvturner.com/images/hearmecode_logo.png', // Hear Me Code
-                'http://shannonvturner.com/images/codeforprogress_logo.png', // Code for Progress
-                'https://raw.githubusercontent.com/dcfemtech/dcfemtech.github.io/master/images/wwcdc.png', // Women Who Code
-                'https://raw.githubusercontent.com/dcfemtech/dcfemtech.github.io/master/images/lwt.jpeg', // Lesbians Who Tech
-                'https://raw.githubusercontent.com/dcfemtech/dcfemtech.github.io/master/images/ncwit.png', // GEMS/NCWIT
-                'https://raw.githubusercontent.com/dcfemtech/dcfemtech.github.io/master/icons/dcft-full.png' // DCFemTech
+                'https://pbs.twimg.com/profile_images/344513261583314557/93e9babd097a6ee9d55cf978fcde149e.png', // Good Sense Farm
+                'https://scontent-dfw.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10353544_1559537784266519_7914484603952914474_n.jpg?oh=7768c9233fd964e1732b642458356af9&oe=557F4209', // Nomad Yard
+                'https://scontent-dfw.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10915263_901876896513850_3355434104691573408_n.jpg?oh=22f840567bb6a770a485df72ff75b42a&oe=557571BA', // Wiilo Creative Director
+                'https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10929926_901875649847308_2384987672251215102_n.jpg?oh=b8a3d97ea0fb42cb5872a92c6f23d3fa&oe=55B60017&__gda__=1438556363_b918aff300fc5462ccfd40236db57ab4', // Curt Chef
+                'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/10922719_901875523180654_6664669731411690544_n.jpg?oh=35c11d79f33ffc13cff64837d717d74d&oe=55822864&__gda__=1434638317_7a902f1fa9c09d9c73714e05d60ed09e', // Zachari Farmer/CEO
+                'https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/11034283_10152632972486035_6040062221762943251_n.jpg?oh=b3f3431b9a6a83193c60210e964e5352&oe=55876D7C&__gda__=1434492185_a51145c6626a025faacf8fead6c118e4', // Almah The Alchemist
                 ]
                 var logo = logos[Math.floor(Math.random() * 6)];
                 $("#resolution").html("<img src='" + logo + "' class='logo'>");
                 $("#resolution").addClass('logo-container');
             }
             else {
-                // Apply random background color class (.pink, .yellow, .lightblue, .darkblue) on load
-                var colors = ['pink', 'yellow', 'lightblue', 'darkblue'];
-                var color = colors[Math.floor(Math.random() * 4)];
+                // Apply random background color class (.green, .pink, .orange .yellow, .lightblue, .darkblue, .purple) on load
+                var colors = ['green', 'pink', 'orange', 'yellow', 'lightblue', 'darkblue', 'purple'];
+                var color = colors[Math.floor(Math.random() * 7)];
                 $("body").addClass(color);
             }
         });
